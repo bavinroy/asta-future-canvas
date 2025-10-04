@@ -1,4 +1,5 @@
 import { Clock } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Schedule = () => {
   const scheduleDay1 = [
@@ -35,19 +36,31 @@ export const Schedule = () => {
     <section className="relative py-24 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
             Event <span className="gradient-text">Schedule</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Two action-packed days of learning, competing, and networking
           </p>
-        </div>
+        </motion.div>
 
         {/* Schedule Days */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Day 1 */}
-          <div className="glass-card p-8">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="glass-card p-8"
+          >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
               <h3 className="text-3xl font-bold gradient-text">Day 1</h3>
@@ -69,10 +82,16 @@ export const Schedule = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Day 2 */}
-          <div className="glass-card p-8">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="glass-card p-8"
+          >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-3 h-3 rounded-full bg-orange-500 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
               <h3 className="text-3xl font-bold gradient-text">Day 2</h3>
@@ -94,7 +113,7 @@ export const Schedule = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

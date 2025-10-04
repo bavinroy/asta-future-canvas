@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
   return (
@@ -12,18 +13,25 @@ export const Footer = () => {
               The premier annual tech symposium organized by the Department of AIDS, CSE & IT at Selvam College of Technology.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="bg-card hover:bg-primary/20 p-2 rounded-lg transition-colors">
-                <Facebook className="w-5 h-5 text-primary" />
-              </a>
-              <a href="#" className="bg-card hover:bg-primary/20 p-2 rounded-lg transition-colors">
-                <Twitter className="w-5 h-5 text-primary" />
-              </a>
-              <a href="#" className="bg-card hover:bg-primary/20 p-2 rounded-lg transition-colors">
-                <Instagram className="w-5 h-5 text-primary" />
-              </a>
-              <a href="#" className="bg-card hover:bg-primary/20 p-2 rounded-lg transition-colors">
-                <Linkedin className="w-5 h-5 text-primary" />
-              </a>
+              {[
+                { icon: Facebook, href: "#" },
+                { icon: Twitter, href: "#" },
+                { icon: Instagram, href: "#" },
+                { icon: Linkedin, href: "#" }
+              ].map((social, idx) => {
+                const Icon = social.icon;
+                return (
+                  <motion.a
+                    key={idx}
+                    href={social.href}
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="bg-card hover:bg-primary/20 p-2 rounded-lg transition-colors"
+                  >
+                    <Icon className="w-5 h-5 text-primary" />
+                  </motion.a>
+                );
+              })}
             </div>
           </div>
 

@@ -40,15 +40,21 @@ All colors MUST be HSL.
 
     /* Premium gradients */
     --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(25, 95%, 53%));
+    --gradient-primary: linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(25, 95%, 53%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(240, 10%, 3.9%), hsl(240, 8%, 8%));
     --gradient-glow: radial-gradient(circle at 50% 50%, hsla(38, 92%, 50%, 0.15), transparent 50%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsla(28,100%,74%,0.15) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsla(189,100%,56%,0.1) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
     
-    /* Shadows with gold glow */
-    --shadow-gold: 0 0 40px hsla(38, 92%, 50%, 0.3);
-    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    /* Enhanced shadows */
+    --shadow-gold: 0 0 60px hsla(38, 92%, 50%, 0.4), 0 0 100px hsla(38, 92%, 50%, 0.2);
+    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.6), 0 2px 8px hsla(38, 92%, 50%, 0.1);
+    --shadow-intense: 0 20px 60px hsla(0, 0%, 0%, 0.8), 0 0 80px hsla(38, 92%, 50%, 0.3);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 }
 
@@ -60,17 +66,25 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+    font-family: 'Orbitron', 'Inter', sans-serif;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-xl bg-card/40 border border-border/50;
+    @apply backdrop-blur-2xl bg-card/40 border border-border/50 rounded-2xl;
     box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+  
+  .glass-card:hover {
+    box-shadow: var(--shadow-intense);
+    border-color: hsl(var(--primary) / 0.3);
   }
   
   .gold-glow {
@@ -82,9 +96,25 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1;
+    @apply transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02];
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .perspective-card {
+    transform-style: preserve-3d;
+    transition: var(--transition-bounce);
   }
 }

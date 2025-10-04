@@ -1,78 +1,130 @@
 import { Button } from "@/components/ui/button";
-import { Check, IndianRupee, Users } from "lucide-react";
+import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Registration = () => {
-  const features = [
-    "Access to all technical workshops",
-    "Participate in multiple competitions",
-    "Networking opportunities with industry experts",
-    "Certificate of participation",
-    "Event kit and goodies",
-    "Lunch and refreshments for both days"
-  ];
-
   return (
-    <section className="relative py-24 px-4 bg-gradient-to-b from-background via-card/20 to-background">
-      <div className="container mx-auto max-w-4xl">
-        {/* Section Header */}
-        <div className="text-center mb-16">
+    <section className="relative py-24 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            <span className="gradient-text">Register Now</span>
+            <span className="gradient-text">Registration</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Secure your spot at the most exciting tech symposium of the year
+            Register now and be part of this amazing event
           </p>
-        </div>
+        </motion.div>
 
-        {/* Registration Card */}
-        <div className="glass-card p-10 relative overflow-hidden">
-          {/* Glow Effect */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
-          
-          <div className="relative z-10">
-            {/* Pricing */}
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-lg text-muted-foreground">Registration Fee</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <IndianRupee className="w-12 h-12 text-primary" />
-                <span className="text-6xl font-bold gradient-text">500</span>
-              </div>
-              <p className="text-muted-foreground">Per Participant (Early Bird)</p>
-              <p className="text-sm text-primary mt-2">Limited seats available!</p>
-            </div>
-
-            {/* Features List */}
-            <div className="space-y-3 mb-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="bg-primary/20 rounded-full p-1 mt-0.5">
-                    <Check className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">{feature}</span>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.03, y: -5 }}
+            className="glass-card p-8"
+          >
+            <h3 className="text-3xl font-bold mb-4 gradient-text">Single Event</h3>
+            <div className="text-4xl font-bold text-foreground mb-6">₹100</div>
+            <ul className="space-y-3 mb-8">
+              {["Event participation", "Certificate", "Event kit", "Refreshments"].map((feature, index) => (
+                <motion.li 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-center gap-2 text-muted-foreground"
+                >
+                  <Check className="w-5 h-5 text-primary" />
+                  {feature}
+                </motion.li>
               ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="hero" className="px-8">
-                Register as Individual
+            </ul>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button variant="outline" size="lg" className="w-full">
+                Register Now
               </Button>
-              <Button size="lg" variant="outline" className="px-8 border-primary/50 hover:bg-primary/10">
-                Team Registration
-              </Button>
-            </div>
+            </motion.div>
+          </motion.div>
 
-            {/* Additional Info */}
-            <div className="mt-8 text-center text-sm text-muted-foreground">
-              <p>Registration closes on March 10, 2025</p>
-              <p className="mt-1">For queries: asta2k25@selvamtech.edu</p>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.03, y: -5 }}
+            className="glass-card p-8 border-primary/50 relative overflow-hidden"
+          >
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/10"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <div className="relative z-10">
+              <div className="bg-gradient-to-r from-primary to-orange-500 text-primary-foreground text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">
+                BEST VALUE
+              </div>
+              <h3 className="text-3xl font-bold mb-4 gradient-text">All Events Pass</h3>
+              <div className="text-4xl font-bold text-foreground mb-6">₹300</div>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "All event access",
+                  "Workshop access",
+                  "Certificate",
+                  "Premium event kit",
+                  "All-day refreshments",
+                  "Networking sessions"
+                ].map((feature, index) => (
+                  <motion.li 
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-2 text-muted-foreground"
+                  >
+                    <Check className="w-5 h-5 text-primary" />
+                    {feature}
+                  </motion.li>
+                ))}
+              </ul>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="hero" size="lg" className="w-full">
+                  Get Full Access
+                </Button>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="glass-card p-6 text-center"
+        >
+          <p className="text-muted-foreground">
+            Registration closes on <span className="text-primary font-semibold">March 10, 2025</span>
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            For queries: <a href="mailto:asta2k25@selvamtech.edu" className="text-primary hover:underline">asta2k25@selvamtech.edu</a>
+          </p>
+        </motion.div>
       </div>
     </section>
   );
