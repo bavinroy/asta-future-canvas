@@ -14,10 +14,8 @@ export const Footer = () => {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Facebook, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Linkedin, href: "#" }
+                { icon: Instagram, href: "https://www.instagram.com/sct_it_itsa/" },
+                { icon: Linkedin, href: "https://www.linkedin.com/school/selvamtechedu/" }
               ].map((social, idx) => {
                 const Icon = social.icon;
                 return (

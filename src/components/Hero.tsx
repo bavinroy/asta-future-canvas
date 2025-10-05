@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, MapPin, PhoneCall, Users } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { motion } from "framer-motion";
 
@@ -99,6 +99,7 @@ export const Hero = () => {
             { icon: Calendar, text: "Oct 24, 2025" },
             { icon: MapPin, text: "Namakkal Campus" },
             { icon: Users, text: "500+ Participants" }
+            
           ].map((item, index) => (
             <motion.div
               key={index}
