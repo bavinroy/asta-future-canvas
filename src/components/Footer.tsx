@@ -10,7 +10,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">ASTA-2k25</h3>
             <p className="text-muted-foreground mb-4">
-              The premier annual tech symposium organized by the Department of AIDS, CSE & IT at Selvam College of Technology.
+              The premier annual tech symposium organized by the Department of Information Technology at Selvam College of Technology.
             </p>
             <div className="flex gap-3">
               {[
@@ -49,42 +49,37 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+91 7397548124</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm">asta2k25@selvamtech.edu</span>
+                <span className="text-sm">astasct2k25@gmail.com</span>
               </div>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold text-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>
-                <a href="#about" className="hover:text-primary transition-colors">About ASTA</a>
-              </li>
-              <li>
-                <a href="#events" className="hover:text-primary transition-colors">Events</a>
-              </li>
-              <li>
-                <a href="#schedule" className="hover:text-primary transition-colors">Schedule</a>
-              </li>
-              <li>
-                <a href="#registration" className="hover:text-primary transition-colors">Registration</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              </li>
-            </ul>
+            <h3 className="text-lg font-bold text-foreground mb-4">Faculty Coordinators</h3>
+            <p className="text-muted-foreground mb-4">
+              Mrs.P. Abinaya <br />              
+              Mrs.M. Sumathi <br /> 
+              Mrs.S. Saranya <br />             
+            </p>
+            <h3 className="text-lg font-bold text-foreground mb-4">Student Coordinators</h3>
+            <p className="text-muted-foreground mb-4">
+              S. Rasu<br />              
+              V. Suseetha <br /> 
+              B. Dhanush Kumar <br />             
+            </p>
           </div>
+          
+
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-border/50 pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 ASTA-2k25. All rights reserved. Developed by Department of AIDS, CSE & IT
+            © 2025 ASTA'25. All rights reserved. Developed by Department of Information Technology
           </p>
         </div>
       </div>

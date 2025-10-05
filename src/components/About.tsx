@@ -22,7 +22,7 @@ export const About = () => {
     {
       icon: Trophy,
       title: "Competitions",
-      description: "Exciting coding challenges and hackathons with amazing prizes"
+      description: "Exciting coding challenges with amazing prizes"
     },
     {
       icon: Zap,
@@ -60,7 +60,7 @@ export const About = () => {
             About <span className="gradient-text">ASTA</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            ASTA (Association of Students in Technology and Arts) is the premier annual tech symposium 
+            ASTA (Association of Students in Engineering and Technology) is the premier annual tech symposium 
             celebrating innovation, creativity, and technological excellence
           </p>
         </motion.div>
@@ -96,19 +96,10 @@ export const About = () => {
           })}
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="glass-card p-10"
-        >
+        
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "20+", label: "Events" },
-              { value: "500+", label: "Participants" },
-              { value: "50+", label: "Colleges" },
-              { value: "₹5L+", label: "Prize Pool" }
+              
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -123,7 +114,7 @@ export const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+       
       </div>
     </section>
   );

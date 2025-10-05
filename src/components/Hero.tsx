@@ -59,7 +59,7 @@ export const Hero = () => {
           className="glass-card inline-block px-8 py-4 mb-8"
         >
           <h2 className="text-lg font-semibold text-foreground">SELVAM COLLEGE OF TECHNOLOGY</h2>
-          <p className="text-sm text-muted-foreground mt-1">Ponnusamy Nagar, Namakkal, Tamil Nadu 637003, India</p>
+          <p className="text-sm text-muted-foreground mt-1">Salem Road(NH 44), Namakkal, Tamil Nadu 637003, India</p>
           <p className="text-xs text-muted-foreground">(Autonomous)</p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export const Hero = () => {
           className="text-8xl md:text-9xl font-black mb-6"
         >
           <span className="gradient-text gold-glow animate-gradient bg-gradient-to-r from-primary via-orange-500 to-primary">
-            ASTA-2k25
+          ASTA'25
           </span>
         </motion.h1>
 
@@ -85,7 +85,7 @@ export const Hero = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-2xl md:text-3xl font-semibold text-foreground mb-8"
         >
-          Department of AIDS, CSE & IT
+          Department of Information Technology
         </motion.p>
 
         {/* Event Details with Stagger Animation */}
@@ -96,7 +96,7 @@ export const Hero = () => {
           className="flex flex-wrap justify-center gap-6 mb-12"
         >
           {[
-            { icon: Calendar, text: "March 15-16, 2025" },
+            { icon: Calendar, text: "Oct 24, 2025" },
             { icon: MapPin, text: "Namakkal Campus" },
             { icon: Users, text: "500+ Participants" }
           ].map((item, index) => (

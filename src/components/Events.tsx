@@ -7,39 +7,28 @@ export const Events = () => {
   const eventCategories = [
     {
       icon: Code,
-      title: "Coding Events",
+      title: "Technical Events",
       color: "from-blue-500 to-cyan-500",
-      events: ["Code Sprint", "Bug Hunt", "Algo Quest", "Web-a-thon"]
+      events: ["Web Forge (Website Building)", "Internet Using Vibecode"]
     },
     {
       icon: Brain,
       title: "Tech Quiz",
       color: "from-purple-500 to-pink-500",
-      events: ["Tech Trivia", "AI Challenge", "Data Science Quiz", "Crypto Quiz"]
+      events: [ "Decode & Recode(Python & C)","Snap With AI (Replicate Image Using Prompt)"]
     },
     {
       icon: Lightbulb,
       title: "Innovation",
       color: "from-orange-500 to-red-500",
-      events: ["Project Expo", "Startup Pitch", "Idea Presentation", "Paper Presentation"]
+      events: ["Project Presentation", "Paper Presentation", "Workshop(Fullstack Web Development)"]
     },
-    {
-      icon: Palette,
-      title: "Design",
-      color: "from-green-500 to-emerald-500",
-      events: ["UI/UX Design", "Logo Design", "Poster Design", "Video Editing"]
-    },
-    {
-      icon: Gamepad2,
-      title: "Gaming",
-      color: "from-indigo-500 to-blue-500",
-      events: ["E-Sports", "Game Dev", "VR Challenge", "Mobile Gaming"]
-    },
+    
     {
       icon: Mic,
       title: "Non-Tech",
       color: "from-yellow-500 to-orange-500",
-      events: ["Photography", "Short Film", "Treasure Hunt", "Debate"]
+      events: ["Mystric Map Challenge", "Memewar", "Fun Activities"]
     }
   ];
 
