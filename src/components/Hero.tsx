@@ -85,7 +85,7 @@ export const Hero = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-2xl md:text-3xl font-semibold text-foreground mb-8"
         >
-          Department of Information Technology
+          Department of IT, CSE & AIDS
         </motion.p>
 
         {/* Event Details with Stagger Animation */}
@@ -145,7 +145,7 @@ export const Hero = () => {
           transition={{ delay: 1.1, duration: 0.8 }}
           className="mt-8 text-lg text-muted-foreground max-w-2xl mx-auto"
         >
-          Join us for two days of innovation, technology, and collaboration
+          Join us for  innovation, technology, and collaboration
         </motion.p>
       </div>
 

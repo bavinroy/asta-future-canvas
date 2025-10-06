@@ -9,26 +9,14 @@ export const Events = () => {
       icon: Code,
       title: "Technical Events",
       color: "from-blue-500 to-cyan-500",
-      events: ["Web Forge (Website Building)", "Internet Using Vibecode"]
-    },
-    {
-      icon: Brain,
-      title: "Tech Quiz",
-      color: "from-purple-500 to-pink-500",
-      events: [ "Decode & Recode(Python & C)","Snap With AI (Replicate Image Using Prompt)"]
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation",
-      color: "from-orange-500 to-red-500",
-      events: ["Project Presentation", "Paper Presentation", "Workshop(Fullstack Web Development)"]
+      events: ["Web Forge (Website Building)", "Internet Using Vibecode","Decode & Recode(Python & C)","Paper Presentation","Workshop(Fullstack Web Development)"]
     },
     
     {
       icon: Mic,
       title: "Non-Tech",
       color: "from-yellow-500 to-orange-500",
-      events: ["Mystric Map Challenge", "Memewar", "Fun Activities"]
+      events: ["Mystric Map Challenge", "Memewar", "Snap With AI (Replicate Image Using Prompt)","Fun Activities"]
     }
   ];
 

@@ -41,7 +41,7 @@ export const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-sm">
                   Selvam College of Technology<br />
-                  Ponnusamy Nagar, Namakkal<br />
+                  Salem Road(NH 44), Namakkal<br />
                   Tamil Nadu 637003, India
                 </span>
               </div>

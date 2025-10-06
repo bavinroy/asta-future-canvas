@@ -70,9 +70,16 @@ export const Registration = () => {
                 ))}
               </ul>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="hero" size="lg" className="w-full">
-                  Register Now
-                </Button>
+                <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSdCyN6JA1RcT05ZN4VleQr9uNaWya_TdQFXznaUj6wmh7OVSQ/viewform?usp=header"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button variant="hero" size="lg" className="w-full">
+    Register Now
+  </Button>
+</a>
+
               </motion.div>
             </div>
           </motion.div>
@@ -89,7 +96,7 @@ export const Registration = () => {
            All Registration closes on <span className="text-primary font-semibold">October 18, 2025</span>
           </p>
           <p className="text-muted-foreground">
-            Registration closes on Peper Presentation <span className="text-primary font-semibold">October 14, 2025</span>
+            Registration closes on Paper Presentation <span className="text-primary font-semibold">October 14, 2025</span>
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             For queries: <a href="mailto:astasct2k25@gmail.com" className="text-primary hover:underline">astasct2k25@gmail.com</a>
